@@ -1,0 +1,14 @@
+/* 超出部分以 ... 顯示*/
+
+div{
+    /* 設定寬度 */
+
+    display: block;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
