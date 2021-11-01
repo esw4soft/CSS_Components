@@ -1,0 +1,12 @@
+/* 多行超出部分以 ... 顯示 */
+
+
+div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+
+    /* 可自訂要幾行,例: 2是2行超出部分 ... */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
