@@ -5,3 +5,6 @@ body{
     background-image: linear-gradient(to left, #eee 1px, transparent 1px),
     linear-gradient(to bottom,#eee 1px,transparent 1px);
 }
+
+
+/* * 要縮小到12px以下可以使用 transform:translate縮 */
