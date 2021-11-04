@@ -1,0 +1,9 @@
+// box-sizing : border-box 可使border和padding 算在一個物件的寬度範圍內 預設是content-box不會把border和padding算在裡面
+// 在跑版時可以使用或是一骰就使用避免跑版 但最好還是去了解基本觀念
+
+
+*, *::before, *::after {
+
+    box-sizing: border-box; 
+
+}
