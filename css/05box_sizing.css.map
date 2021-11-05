@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "AAIA,AAAA,CAAC,EAAE,CAAC,AAAA,QAAQ,EAAE,CAAC,AAAA,OAAO,CAAC;EAEnB,UAAU,EAAE,UAAU;CAEzB",
     "sources": [
-        "scss/05box_sizing.scss"
+        "../components/05box_sizing.scss"
     ],
     "names": [],
     "file": "05box_sizing.css"
