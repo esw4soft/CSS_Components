@@ -14,6 +14,7 @@ tbody {
     overflow: -moz-hidden-unscrollable;
 
     // 使畫面可以卷動 需要先有高度
+    // 注意: 內容物需要超過高度才會產生滾動效果
     height: 35vh;
     overflow-y: scroll;
 }
