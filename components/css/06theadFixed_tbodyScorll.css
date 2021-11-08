@@ -1,0 +1,18 @@
+tbody {
+  display: block;
+  overflow: -moz-hidden-unscrollable;
+  height: 35vh;
+  overflow-y: scroll;
+}
+
+tbody::-webkit-scrollbar {
+  display: none;
+}
+
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin: -1px 0 0 0;
+}
+/*# sourceMappingURL=06theadFixed_tbodyScorll.css.map */

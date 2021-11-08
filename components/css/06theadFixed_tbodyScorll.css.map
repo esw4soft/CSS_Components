@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAOA,AAAA,KAAK,CAAC;EAGF,OAAO,EAAE,KAAK;EAGd,QAAQ,EAAE,wBAAwB;EAGlC,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,MAAM;CACrB;;AAGD,AAAA,KAAK,AAAA,mBAAmB,CAAC;EACrB,OAAO,EAAE,IAAI;CAChB;;AAED,AAAA,KAAK,EAAE,KAAK,CAAC,EAAE,CAAC;EAGZ,OAAO,EAAE,KAAK;EAId,KAAK,EAAE,IAAI;EACX,YAAY,EAAE,KAAK;EAGnB,MAAM,EAAE,UAAU;CACrB",
+    "sources": [
+        "../06theadFixed_tbodyScorll.scss"
+    ],
+    "names": [],
+    "file": "06theadFixed_tbodyScorll.css"
+}

@@ -1,0 +1,38 @@
+// table 畫面
+// thead 固定在上方 tbody可以捲動 + 隱藏卷軸條
+
+// 如果做完沒有正常顯示參照下列stackoverflow
+// https://stackoverflow.com/questions/23989463/how-to-set-tbody-height-with-overflow-scroll/23989771
+
+
+tbody {
+
+    // 需設置block 如果沒有設block tbody高度多高會長多高 但是少不會變少(類似min-height)
+    display: block;
+
+    // 隱藏捲動條IE相容
+    overflow: -moz-hidden-unscrollable;
+
+    // 使畫面可以卷動 需要先有高度
+    height: 35vh;
+    overflow-y: scroll;
+}
+
+// 隱藏捲動條chrome相容
+tbody::-webkit-scrollbar {
+    display: none;
+}
+
+thead, tbody tr {
+
+    // 外層改block屬性 但裡面tr能然保持table性質
+    display: table;
+
+    // 設置寬度使搭配table-layout做均勻拉伸
+    // table-layout:fixed 可使表格均勻拉到跟寬一樣的寬度(類似flex-grow)
+    width: 100%;
+    table-layout: fixed;
+
+    // 使表格格線不重疊
+    margin: -1px 0 0 0;
+}
