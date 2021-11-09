@@ -7,3 +7,55 @@
     box-sizing: border-box; 
 
 }
+
+
+
+
+// 同場加映 ::before & ::after 偽元素選擇器
+
+div{
+    padding: 10px;
+    background: gray;
+}
+// 在div前加入
+div::before{
+
+    // 加入的東西
+	content: '我是before';
+	color: red;
+}
+
+// 在div後加入
+div::after{
+	content: '我是after';
+	color: green;
+}
+
+// 偽元素選擇器 常用的3個方法
+// 1. string 
+// 上面的範例
+
+// 2. counter 計數數值
+.list{
+    // 父層設定 counter-reset: 自訂要建立計數的區域名稱 起始數
+    counter-reset: my-area 5;
+  }
+  .list-item::before{
+    //   要建立計數的區域名稱
+    content: counter(my-area) '. ';
+
+    // 要建立計數的區域名稱 欲遞增的數
+    counter-increment: my-area 1; 
+  }
+
+// 3. attr 用css取得想要的HTML屬性的值
+
+a::after{
+    // 取得data-note 這個屬性裡面的值
+	content: attr(data-note);
+	color: #aaa;
+}
+
+// 特別注意事項:
+// 因為 ::before / ::after 本身是偽元素，是一個不存在實體的物件，雖然他會占空間但也只是佔一個偽元素的項目而已
+// 但因為有SEO問題，盡量將偽元素使用在裝飾性的物件上，別使用在有seo效果的文字上
