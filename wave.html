@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            overflow-x: hidden;
+        }
+        body{
+            overflow-x: hidden;
+            height: 100vh;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        h1{
+            height: 100px;
+            text-align: center;
+            color: #205fa8;
+        }
+
+
+        .text-content-text {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 1.8px;
+            color: #707070;
+            margin: 30px auto;
+        }
+
+        .my-150 {
+            margin: 150px 0;
+        }
+
+        .mt-100 {
+            margin-top: 100px;
+        }
+
+        .px-200 {
+            padding: 0 200px;
+        }
+
+        .main-title {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .main-title svg {
+            height: 38px;
+            width: auto;
+        }
+
+        .main-title h2 {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 30px;
+            letter-spacing: 2.7px;
+            color: #205fa8;
+            margin: 0;
+            padding: 0;
+            margin-left: 20px;
+        }
+
+        .d-flex {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .d-column {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .jcsb {
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+        .ocean * {
+            color: #f2f1f0;
+        }
+
+        .ocean .main-title {
+            -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
+        }
+
+        .ocean {
+            width: 100%;
+            position: relative;
+            background: #004087;
+            margin-top: 150px;
+            padding: 30px 0;
+        }
+
+        .wave {
+            background: url(https://img.shoplineapp.com/media/image_clips/618df641cffd7f002020b18b/original.png?1636693566) repeat-x;
+            position: absolute;
+            background-size: contain;
+            top: -198px;
+            left: 0;
+            width: 6400px;
+            height: 198px;
+            -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+            animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            z-index: 0;
+        }
+
+        .wave:nth-of-type(even) {
+            top: -175px;
+            left: 0;
+            -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+                swell 7s ease -1.25s infinite;
+            animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+                swell 7s ease -1.25s infinite;
+            opacity: 1;
+        }
+
+        .reserve {
+            top: unset;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            bottom: -198px;
+            left: 0;
+        }
+
+        .reserve:nth-of-type(even) {
+            top: unset;
+            bottom: -175px;
+            -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+                swell-re 7s ease -1.25s infinite;
+            animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+                swell-re 7s ease -1.25s infinite;
+            opacity: 1;
+            left: 0;
+        }
+
+        @-webkit-keyframes wave {
+            0% {
+                margin-left: 0;
+            }
+
+            100% {
+                margin-left: -1600px;
+            }
+        }
+
+        @keyframes wave {
+            0% {
+                margin-left: 0;
+            }
+
+            100% {
+                margin-left: -1600px;
+            }
+        }
+
+        @-webkit-keyframes swell {
+
+            0%,
+            100% {
+                -webkit-transform: translate3d(0, -25px, 0);
+                transform: translate3d(0, -25px, 0);
+            }
+
+            50% {
+                -webkit-transform: translate3d(0, 5px, 0);
+                transform: translate3d(0, 5px, 0);
+            }
+        }
+
+        @keyframes swell {
+
+            0%,
+            100% {
+                -webkit-transform: translate3d(0, -25px, 0);
+                transform: translate3d(0, -25px, 0);
+            }
+
+            50% {
+                -webkit-transform: translate3d(0, 5px, 0);
+                transform: translate3d(0, 5px, 0);
+            }
+        }
+
+        @-webkit-keyframes swell-re {
+
+            0%,
+            100% {
+                -webkit-transform: translate3d(0, -25px, 0) rotate(180deg);
+                transform: translate3d(0, -25px, 0) rotate(180deg);
+            }
+
+            50% {
+                -webkit-transform: translate3d(0, 5px, 0) rotate(180deg);
+                transform: translate3d(0, 5px, 0) rotate(180deg);
+            }
+        }
+
+        @keyframes swell-re {
+
+            0%,
+            100% {
+                -webkit-transform: translate3d(0, -25px, 0) rotate(180deg);
+                transform: translate3d(0, -25px, 0) rotate(180deg);
+            }
+
+            50% {
+                -webkit-transform: translate3d(0, 5px, 0) rotate(180deg);
+                transform: translate3d(0, 5px, 0) rotate(180deg);
+            }
+        }
+
+        @media all and (max-width: 576px) {
+            .px-200 {
+                padding: 0 36px;
+            }
+
+            .ocean {
+                margin-top: 200px;
+            }
+        }
+
+        footer{
+            position: relative;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Wave Components</h1>
+    <div class="ocean my-150">
+        <div class="d-flex aic jcsb mt-100 px-200">
+            <div class="d-column">
+                <div class="text-content">
+                    <div class="main-title"><img
+                            src="https://img.shoplineapp.com/media/image_clips/618b3f42337d870032fbba08/original.png?1636515649">
+                        <h2>Wave</h2>
+                    </div>
+                    <p class="text-content-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos esse, recusandae eaque illo similique non odio nesciunt soluta architecto provident fugiat dolores aperiam quam libero rerum modi officiis! Nihil, error!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave reserve"></div>
+        <div class="wave reserve"></div>
+    </div>
+    <footer>
+        <div class="wave wave2"></div>
+        <div class="wave wave2"></div>
+        <h2 class="footerText">20211203 footer</h2>
+    </footer>
+</body>
+
+</html>
